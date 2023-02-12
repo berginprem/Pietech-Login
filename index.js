@@ -15,8 +15,8 @@ const dbUrl = process.env.DB_URL
 const MongoDBStore = require('connect-mongodb-session')(session);
 
 mongoose.set('strictQuery', false);
-mongoose.connect(dbUrl)
-// mongoose.connect('mongodb://localhost:27017/pietech-login')
+// mongoose.connect(dbUrl)
+mongoose.connect('mongodb://localhost:27017/pietech-login')
 
 const db = mongoose.connection;
 db.on('error', console.log.bind(console, "connection error:"));
